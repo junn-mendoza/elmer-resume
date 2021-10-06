@@ -6,7 +6,7 @@ const FilteredReviews = (props) => {
       return (
         <Container >
             <Row className="justify-content-center ">
-                  {props.filteredReviews.map((review) => {
+                  {props && props.filteredReviews.map((review) => {
                     const {reviewerImage,name,date,comment,id,numStar} = review;
                     return (
                           <Col className="fback_card border border-primary  p-3 m-2 shadow" key={id}>
@@ -32,10 +32,10 @@ const FilteredReviews = (props) => {
                                         <h6> {name}</h6>
                                     </Row>
                                     <Row>
-                                       - {new Intl.DateTimeFormat(
+                                       {/* - {new Intl.DateTimeFormat(
                                             'en-US', 
                                             { year: 'numeric', month: 'short', day: '2-digit'})
-                                            .format(new Date(Date.parse(date)))} 
+                                            .format(new Date(Date.parse(date)))}  */}
                                     </Row>
                                 </Col>
                             </Row>
